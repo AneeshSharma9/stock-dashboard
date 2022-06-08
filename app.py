@@ -8,6 +8,7 @@ from dateutil import relativedelta
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
 import time
+import gunicorn
 
 app = dash.Dash()
 server = app.server
