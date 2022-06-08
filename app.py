@@ -1,5 +1,3 @@
-from multiprocessing.connection import wait
-from turtle import width
 import yfinance as yf
 import datetime
 import dash
@@ -7,8 +5,6 @@ from dash import dcc, html
 from dateutil import relativedelta
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
-import time
-import gunicorn
 
 app = dash.Dash()
 server = app.server
