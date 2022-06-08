@@ -1,3 +1,4 @@
+from time import strftime
 import yfinance as yf
 import datetime
 import dash
@@ -10,18 +11,11 @@ app = dash.Dash()
 server = app.server
 
 def serve_layout():
+    hour = int(datetime.datetime.now().strftime("%I")) - 4
     return html.Div(children=[
-        html.H1(children="Live Stock Chart"),
-        html.H2('Prices as of ' + datetime.datetime.now().strftime("%m/%d/%Y %I:%M")),
+        html.H2("Live Stock Chart as of " + datetime.datetime.now().strftime("%m/%d/%Y ") + str(hour) + datetime.datetime.now().strftime(":%M")),
 
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '12%'}),
-        dcc.Input(id='input', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%'}),
-        dcc.Input(id='input2', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%'}),
-        dcc.Input(id='input3', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
-
-        html.Div(children='Interval: '),
+        html.Div(children='Period: ', style={'display': 'block'}),
         dcc.Dropdown(id = 'interval_dropdown',
             options = [
                 {'label': '1D', 'value' : '1D'},
@@ -33,9 +27,28 @@ def serve_layout():
             persistence=True,
             style={'width': '25%'}
         ),
-        dcc.Graph(id='graph1',style={'display': 'inline-block', 'width': '32%'}),
-        dcc.Graph(id='graph2',style={'display': 'inline-block', 'width': '32%'}),
-        dcc.Graph(id='graph3',style={'display': 'inline-block', 'width': '32%'}),
+
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '11%', 'padding-right': '1%'}),
+        dcc.Input(id='input', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%', 'padding-right': '1%'}),
+        dcc.Input(id='input2', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%', 'padding-right': '1%'}),
+        dcc.Input(id='input3', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
+        
+        dcc.Graph(id='graph1',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
+        dcc.Graph(id='graph2',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
+        dcc.Graph(id='graph3',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
+
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '11%', 'padding-right': '1%'}),
+        dcc.Input(id='input4', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%', 'padding-right': '1%'}),
+        dcc.Input(id='input5', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%', 'padding-right': '1%'}),
+        dcc.Input(id='input6', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
+
+        dcc.Graph(id='graph4',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
+        dcc.Graph(id='graph5',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
+        dcc.Graph(id='graph6',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
     ])
 
 app.layout = serve_layout
@@ -101,6 +114,30 @@ def update_graph(input_ticker: str, interval):
 @app.callback(
     Output('graph3', 'figure'),
     Input('input3', 'value'),
+    Input('interval_dropdown', 'value')
+)
+def update_graph(input_ticker: str, interval):
+    return update_grapher(input_ticker, interval)
+
+@app.callback(
+    Output('graph4', 'figure'),
+    Input('input4', 'value'),
+    Input('interval_dropdown', 'value')
+)
+def update_graph(input_ticker: str, interval):
+    return update_grapher(input_ticker, interval)
+
+@app.callback(
+    Output('graph5', 'figure'),
+    Input('input5', 'value'),
+    Input('interval_dropdown', 'value')
+)
+def update_graph(input_ticker: str, interval):
+    return update_grapher(input_ticker, interval)
+
+@app.callback(
+    Output('graph6', 'figure'),
+    Input('input6', 'value'),
     Input('interval_dropdown', 'value')
 )
 def update_graph(input_ticker: str, interval):
