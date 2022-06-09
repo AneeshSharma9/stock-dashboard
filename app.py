@@ -12,6 +12,11 @@ server = app.server
 
 def serve_layout():
     hour = int(datetime.datetime.now().strftime("%I")) - 4
+    if hour == 0:
+        hour = 12
+    elif hour < 0:
+        hour = abs(hour)
+        hour = (10-hour) + hour
     return html.Div(children=[
         html.H2("Live Stock Chart as of " + datetime.datetime.now().strftime("%m/%d/%Y ") + str(hour) + datetime.datetime.now().strftime(":%M")),
 
