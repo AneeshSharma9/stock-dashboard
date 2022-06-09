@@ -40,9 +40,9 @@ def serve_layout():
         html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '21.75vw', 'padding-right': '1vw'}),
         dcc.Input(id='input3', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
         
-        dcc.Graph(id='graph1',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
-        dcc.Graph(id='graph2',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
-        dcc.Graph(id='graph3',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
+        dcc.Graph(id='graph1',style={'display': 'inline-block', 'width': '30vw', 'height' : '40vh'}),
+        dcc.Graph(id='graph2',style={'display': 'inline-block', 'width': '30vw', 'height' : '40vh'}),
+        dcc.Graph(id='graph3',style={'display': 'inline-block', 'width': '30vw', 'height' : '40vh'}),
 
         html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '11vw', 'padding-right': '1vw'}),
         dcc.Input(id='input4', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
@@ -51,9 +51,9 @@ def serve_layout():
         html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '21.75vw', 'padding-right': '1vw'}),
         dcc.Input(id='input6', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
 
-        dcc.Graph(id='graph4',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
-        dcc.Graph(id='graph5',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
-        dcc.Graph(id='graph6',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
+        dcc.Graph(id='graph4',style={'display': 'inline-block', 'width': '30vw', 'height' : '40vh'}),
+        dcc.Graph(id='graph5',style={'display': 'inline-block', 'width': '30vw', 'height' : '40vh'}),
+        dcc.Graph(id='graph6',style={'display': 'inline-block', 'width': '30vw', 'height' : '40vh'}),
     ])
 
 app.layout = serve_layout
