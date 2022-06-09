@@ -28,27 +28,27 @@ def serve_layout():
             style={'width': '25%'}
         ),
 
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '11%', 'padding-right': '1%'}),
-        dcc.Input(id='input', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%', 'padding-right': '1%'}),
-        dcc.Input(id='input2', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%', 'padding-right': '1%'}),
-        dcc.Input(id='input3', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '11vw', 'padding-right': '1vw'}),
+        dcc.Input(id='input', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '21vw', 'padding-right': '1vw'}),
+        dcc.Input(id='input2', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '21.75vw', 'padding-right': '1vw'}),
+        dcc.Input(id='input3', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
         
-        dcc.Graph(id='graph1',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
-        dcc.Graph(id='graph2',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
-        dcc.Graph(id='graph3',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
+        dcc.Graph(id='graph1',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
+        dcc.Graph(id='graph2',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
+        dcc.Graph(id='graph3',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
 
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '11%', 'padding-right': '1%'}),
-        dcc.Input(id='input4', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%', 'padding-right': '1%'}),
-        dcc.Input(id='input5', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
-        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '24%', 'padding-right': '1%'}),
-        dcc.Input(id='input6', value='', type='text',persistence=True,style={'display': 'inline-block','width': '5%'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '11vw', 'padding-right': '1vw'}),
+        dcc.Input(id='input4', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '21vw', 'padding-right': '1vw'}),
+        dcc.Input(id='input5', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
+        html.Div(children='Ticker: ',style={'display': 'inline-block', 'padding-left': '21.75vw', 'padding-right': '1vw'}),
+        dcc.Input(id='input6', value='', type='text',persistence=True,style={'display': 'inline-block','width': '4vw'}),
 
-        dcc.Graph(id='graph4',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
-        dcc.Graph(id='graph5',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
-        dcc.Graph(id='graph6',style={'display': 'inline-block', 'width': '67vh', 'height' : '35vh'}),
+        dcc.Graph(id='graph4',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
+        dcc.Graph(id='graph5',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
+        dcc.Graph(id='graph6',style={'display': 'inline-block', 'width': '30vw', 'height' : '35vh'}),
     ])
 
 app.layout = serve_layout
