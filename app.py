@@ -95,6 +95,7 @@ def update_grapher(input_ticker: str, interval):
                 low=df['Low'],
                 close=df['Close'])])
         figure.update_layout(title_text=input_ticker.upper(), title_x=0.5)
+        figure.update(layout_xaxis_rangeslider_visible=False)
 
    
     return figure
