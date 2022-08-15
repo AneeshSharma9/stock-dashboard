@@ -1,6 +1,6 @@
 # Stock Dashboard
 
-### Link: https://stock-dashboard-app-aneeshs.herokuapp.com/
+## Link: https://stock-dashboard-app-aneeshs.herokuapp.com/
 
 ### Description
 Personalized dashboard which allows you to choose up to six ticker symbols and view their stock prices and history.
