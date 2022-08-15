@@ -7,6 +7,7 @@ https://stock-dashboard-app-aneeshs.herokuapp.com/
 Personalized dashboard which allows you to choose up to six ticker symbols and view their stock prices and history.
 
 ## Development
+Live data extracted using the yfinance library which downloads market data from Yahoo! Finance's API\
 Created using Plotly in Python\
 Displayed using Dash\
 Hosted using Heroku
