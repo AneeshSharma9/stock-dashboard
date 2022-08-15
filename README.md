@@ -9,7 +9,7 @@ Personalized dashboard which allows you to choose up to six ticker symbols and v
 ## Development
 Created using Plotly in Python\
 Displayed using Dash\
-Hosted using Heroku\
+Hosted using Heroku
 
 ## Tools
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
