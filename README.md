@@ -1,6 +1,4 @@
 # **Stock Dashboard**
-\
-\
 
 ## 🔗 Link 
 https://stock-dashboard-app-aneeshs.herokuapp.com/
